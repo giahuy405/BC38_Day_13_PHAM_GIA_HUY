@@ -1,4 +1,7 @@
 // BÀI 1 
+// input : lương 1 ngày, số ngày làm 
+//progress : tổng lương = lương 1 ngày * số ngày làm
+// output: tổng lương
 document.getElementById('calSalary').onclick = function () {
     var SalaryPerDay = document.getElementById('SalaryPerDay').value;
     var DaysWork = document.getElementById('DaysWork').value;
@@ -6,6 +9,9 @@ document.getElementById('calSalary').onclick = function () {
     document.getElementById('displaySalary').innerHTML = totalSalary.toLocaleString() + " VNĐ";
 }
 // BÀI 2 
+// input 5 số 
+// progress : trung bình cộng 5 số, dùng Number() để ép kiểu
+// output: số trung bình
 document.getElementById('calAverage').onclick = function () {
     var number1 = document.getElementById('number1').value;
     var number2 = document.getElementById('number2').value;
@@ -17,6 +23,9 @@ document.getElementById('calAverage').onclick = function () {
 }
 
 // BÀI 3
+// input: số tiền usd 
+// progress: tiền Việt = 23.500 * tiền usd 
+// output : tiền việt
 document.getElementById('changeMoney').onclick = function () {
     var usdPrice = document.getElementById('usdPrice').value;
     var vnPrice = usdPrice * 23500;
@@ -24,6 +33,10 @@ document.getElementById('changeMoney').onclick = function () {
 }
 
 // BÀI 4
+// input chiều dài và chiều rộng 
+// progress : diện tích = dài * rộng 
+            // chu vi = (dài + rộng)*2 
+// output : chu vi và diện tích 
 document.getElementById('calculateAreaPerimeter').onclick = function () {
     var lengthRectangle = Number(document.getElementById('lengthRectangle').value);
     var widthRectangle = Number(document.getElementById('widthRectangle').value);
@@ -34,6 +47,9 @@ document.getElementById('calculateAreaPerimeter').onclick = function () {
 }
 
 // BÀI 5 
+// input: nhập số có 2 chữ số 
+// progress : tách từng số ra và dùng parseInt để ép kiểu số nguyên
+//output : tổng của 2 chữ số đó 
 document.getElementById('calNumber').onclick = function () {
     var number = Number(document.getElementById('number').value);
     var firstDigit = number / 10;
