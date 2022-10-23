@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" style="margin-bottom: 500px">
+        <div class="card w-25 mt-5 mx-auto">
+            <div class="card-header bg-dark text-white">
+                BÀI 1 : TÍNH TIỀN LƯƠNG
+                <!-- Tính tiền lương nhân viên
+                💡Gợi ý:
+                Công thức: Lương = Lương 1 ngày * số ngày làm
+                Kiến thức áp dụng:
+                Tìm tới thẻ và lấy giá trị
+                Tạo hàm cơ bản
+                Gắn sự kiện click cho button
+                Thay đổi nội dung cho thẻ
+                Xử lý load trang với button của form -->
+            </div>
+            <div class="card-body">
+                <input id="SalaryPerDay" type="number" placeholder="Nhập lương 1 ngày" class="form-control">
+                <input id="DaysWork" type="number" placeholder="Nhập số ngày làm" class="form-control mt-2">
+                <button id="calSalary" class="btn btn-success mt-3">Tính lương</button>
+            </div>
+            <div class="card-footer ">
+                <span>Tổng lương :</span>
+                <span id="displaySalary">0 VNĐ</span>
+            </div>
+        </div>
+        <div class="card mt-5 w-50 mx-auto">
+            <div class="card-header bg-dark text-white  ">
+                BÀI 2 : TÍNH GIÁ TRỊ TRUNG BÌNH
+                <!-- Kiến thức áp dụng:
+                Tìm tới thẻ và lấy giá trị
+                Tạo hàm cơ bản
+                Gắn sự kiện click cho button
+                Thay đổi nội dung cho thẻ
+                Xử lý load trang với button của form
+                Xử lý ép kiểu dữ liệu -->
+            </div>
+            <div class="card-body">
+                <input id="number1" type="number" class="form-control w-auto d-inline" placeholder="Nhập số thứ 1">
+                <input id="number2" type="number" class="form-control w-auto d-inline" placeholder="Nhập số thứ 2">
+                <input id="number3" type="number" class="form-control w-auto mt-2 d-inline" placeholder="Nhập số thứ 3">
+                <input id="number4" type="number" class="form-control w-auto mt-2 d-inline" placeholder="Nhập số thứ 4">
+                <input id="number5" type="number" class="form-control w-auto mt-2 d-inline" placeholder="Nhập số thứ 5">
+                <button id="calAverage" class="btn btn-success mt-3 d-block">Tính trung bình</button>
+            </div>
+            <div class="card-footer">
+                <span>Trung bình : </span>
+                <span id="displayAverage"></span>
+            </div>
+        </div>
+        <div class="card mt-5 w-25 mx-auto">
+            <div class="card-header bg-dark text-white">
+                Bài 3 : QUY ĐỔI TIỀN
+                <!-- Kiến thức áp dụng:
+                Áp dụng các kiến thức như bài 1 và 2
+                Giá USD mặc định 1 USD = 23500
+                Có thể dùng thêm NumberFormat để số tiền hiển thị đẹp hơn:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+                VD: new Intl.NumberFormat('vn-VN').format(23500); => 23,500 -->
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="number" placeholder="Nhập số tiền USD" id="usdPrice">
+                <button class="btn btn-success mt-2" id="changeMoney">Quy đổi tiền</button>
+            </div>
+            <div class="card-footer">
+                <span>Tiền Việt : </span>
+                <span id="displayMoneyChanged"></span>
+            </div>
+        </div>
+        <div class="card  mt-5 w-25 mx-auto">
+            <div class="card-header bg-dark text-white">
+                Bài 4 : TÍNH S VÀ C HCN
+                <!-- Kiến thức áp dụng:
+                Áp dụng các kiến thức như các bài trước
+                Diện tích: dài x rộng
+                Chu vi: (dài + rộng) x 2 -->
+            </div>
+            <div class="card-body">
+                <input placeholder="Nhập chiều dài" type="number" class="form-control" id="lengthRectangle">
+                <input placeholder="Nhập chiều rộng" type="number" class="form-control mt-2" id="widthRectangle">
+                <button id="calculateAreaPerimeter" class="btn btn-success mt-3">Tính</button>
+            </div>
+            <div class="card-footer">
+                <span>Diện tích : </span>
+                <span id="displayArea"></span>
+                <div>
+                    <span>Chu vi : </span>
+                    <span id="displayPerimeter"></span>
+                </div>
+            </div>
+        </div>
+        <div class="card  mt-5 w-25 mx-auto">
+            <div class="card-header bg-dark text-white">
+                Bài 5 : TÍNH TỔNG 2 KÝ SỐ
+            </div>
+            <div class="card-body">
+                <input id="number" type="number" class="form-control" placeholder="Nhập số có 2 chữ số">
+                <button id="calNumber" class="btn btn-success mt-3">Tính tổng</button>
+            </div>
+            <div class="card-footer">
+                <span>Tổng 2 con số : </span>
+                <span id="displaySum"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
